@@ -8,7 +8,7 @@
 	{if $paginator->isFirst()}
 	<span class="button">« Previous</span>
 	{else}
-	<a href="{link this, 'page' => $paginator->page - 1}">« Previous</a>
+	<a href="{link this, 'page' => $paginator->page - 1}" rel="prev">« Previous</a>
 	{/if}
 
 	{foreach $steps as $step}
@@ -23,7 +23,7 @@
 	{if $paginator->isLast()}
 	<span class="button">Next »</span>
 	{else}
-	<a href="{link this, 'page' => $paginator->page + 1}">Next »</a>
+	<a href="{link this, 'page' => $paginator->page + 1}" rel="next">Next »</a>
 	{/if}
 </div>
 {/if}
