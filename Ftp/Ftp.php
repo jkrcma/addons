@@ -147,7 +147,8 @@ class Ftp extends Nette\Object
 	 */
 	public function fileExists($file)
 	{
-		return is_array($this->nlist($file));
+		$list = $this->nlist($file);
+		return is_array($list) && $list;
 	}
 
 
